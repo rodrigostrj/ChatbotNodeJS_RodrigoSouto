@@ -1,0 +1,32 @@
+{
+  "name": "chatbot_rodrigosouto",
+  "version": "1.0.0",
+  "description": "Chat bot interacting with several channels",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodrigostrj/ChatbotNodeJS_RodrigoSouto.git"
+  },
+  "keywords": [
+    "ChatBot",
+    "Messenger",
+    "Facebook",
+    "AI",
+    "BOT"
+  ],
+  "author": "Rodrigo Souto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodrigostrj/ChatbotNodeJS_RodrigoSouto/issues"
+  },
+  "homepage": "https://github.com/rodrigostrj/ChatbotNodeJS_RodrigoSouto#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "consign": "^0.1.4",
+    "express": "^4.15.3",
+    "morgan": "^1.8.1"
+  }
+}
