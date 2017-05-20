@@ -28,6 +28,35 @@ SecurityModule.ensureAuthorized = function ensureAuthorized(req, res, next)
     );  
 }
 
+SecurityModule.ensureAuthorizedFacebook = function ensureAuthorized(req, res, next)
+{
+    if(req.query['hub.mode'] != 'subscribe')
+    {
+        return res.status(403).send({ success: false, message: 'no subscribe parammeter provided'}); 
+    }
+
+    // check header or url parameters or post parameters for token
+    var token = req.query['hub.verify_toke'];
+
+    // decode token
+    if (token) 
+    {
+            if (!validatePassword(token))
+            {
+                return res.status(403).json({ success: false, message: 'Failed to authenticate token.' });		
+            }
+            
+            return next();
+    } 
+
+    return res.status(403).send
+    (
+        { 
+        success: false, 
+        message: 'No token provided.'
+        }
+    );  
+}
 
 function validatePassword(password)
 {
