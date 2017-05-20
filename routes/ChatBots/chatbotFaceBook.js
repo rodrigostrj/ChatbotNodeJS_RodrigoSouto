@@ -23,7 +23,7 @@ module.exports = function(app)
             var pageID = entry.id;
             var eventTime = entry.time;
 
-            data.messaging.forEach(function(event)
+            entry.messaging.forEach(function(event)
             {
                 if(event.message)
                 {
