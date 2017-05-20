@@ -7,3 +7,5 @@ https://www.luis.ai/
 https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator
 
 https://medium.com/@RecastAI/a-nodejs-chatbot-tutorial-part-1-a2abd1b1c715
+
+http://www.girliemac.com/blog/2017/01/06/facebook-apiai-bot-nodejs/

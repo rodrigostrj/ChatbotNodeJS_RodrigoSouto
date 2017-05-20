@@ -1,4 +1,5 @@
 var securityModule = require(__base + '/modules/module-security');
+var request        = require("request");
 
 var webhookPath = "/webhook/facebook/";
 
@@ -24,7 +25,7 @@ module.exports = function(app)
             {
                 if (event.message && event.message.text)
                 {
-                    console.log("Texto" + event.message.text);
+                    sendMessage(event.message.text);
                 }
             });
         });
@@ -34,6 +35,30 @@ module.exports = function(app)
 }
 
 
+function sendMessage(event) 
+{
+  let sender = event.sender.id;
+  let text = event.message.text;
 
-
+  request(
+      {
+        url: 'https://graph.facebook.com/v2.9/me/messages',
+        qs: {access_token: "EAAY0AfpFpGEBANcWiiRmC3PSXZAwa1FvtN8p81Ls3KIXlX68qPhb43PqQFFpFmThcREcRrNk169TBojRtQiTU7SYZBDNGcrynvZBwvgKel9FzPZAlVWKr9H6N5BbU3OtHA139IbG8eMkvHyLKGDbTbUxUFqrZA3HMFQ9FUocwZBAZDZD"},
+        method: 'POST',
+        json: { recipient: {id: sender}, message: {text: text}}
+     }
+     ,
+        function (error, response)
+         {
+            if (error)
+            {
+                console.log('Error sending message: ', error);
+            }
+            else if (response.body.error)
+            {
+                console.log('Error: ', response.body.error);
+            }
+        }
+    );
+}
 
