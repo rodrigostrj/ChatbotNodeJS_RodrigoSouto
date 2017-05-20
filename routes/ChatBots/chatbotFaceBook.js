@@ -23,13 +23,13 @@ module.exports = function(app)
             var pageID = entry.id;
             var eventTime = entry.time;
 
-            /*data.messaging.forEach(function(event)
+            data.messaging.forEach(function(event)
             {
                 if(event.message)
                 {
                     console.log(event.message);
                 }
-            });*/
+            });
         });
 
         return res.status(200);

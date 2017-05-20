@@ -45,8 +45,7 @@ SecurityModule.ensureAuthorizedFacebook = function ensureAuthorized(req, res, ne
             {
                 return res.status(403).json({ success: false, message: 'Failed to authenticate token.' });		
             }
-            
-            return next();
+            next();
     } 
 
     return res.status(403).send
