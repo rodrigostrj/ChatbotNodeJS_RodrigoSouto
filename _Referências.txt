@@ -1,1 +1,9 @@
 https://coderweb.com.br/nodejs-e-express-criando-uma-aplicacao-simples-parte-2/
+
+https://www.youtube.com/watch?v=Hv63Uoda9t8
+
+https://www.luis.ai/
+
+https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator
+
+https://medium.com/@RecastAI/a-nodejs-chatbot-tutorial-part-1-a2abd1b1c715

@@ -13,12 +13,10 @@ SecurityModule.ensureAuthorized = function ensureAuthorized(req, res, next)
     {
             if (!validatePassword(token))
             {
-                res.status(403).json({ success: false, message: 'Failed to authenticate token.' });		
-                return;
+                return res.status(403).json({ success: false, message: 'Failed to authenticate token.' });		
             }
             
-            next();
-            return;
+            return next();
     } 
 
     return res.status(403).send

@@ -4,7 +4,6 @@ var config = require('./config/config-general');
 // Set Variables
 var DEVPORT = config.dev_port;
 
-
 process.on('uncaughtException', function(err)
 {
     console.log(err);

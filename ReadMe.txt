@@ -15,7 +15,9 @@ Use Case:
 
 - Architecture Presentation
 - Basic structure in NodeJS
-- Facebook or other chat presentation
+- Chat Bot Integration (Channels)
+- Tool (BotFramework Emulator) =>: https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator
+- Altificial Inteligence (LUIS => https://www.luis.ai) ou (Recast => https://recast.ai/)
 - Chat working
 
 

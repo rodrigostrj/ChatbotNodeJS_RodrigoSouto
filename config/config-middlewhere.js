@@ -3,10 +3,14 @@ var consign      = require('consign');
 var bodyParser   = require('body-parser');
 var morgan       = require("morgan");
 
-module.exports = function() {
+module.exports = function()
+{
 
-    var app = express();
-
+    var app = express(); 
+      
+    // Set root directory
+    global.__base = __dirname + '/../';
+    
     app.locals.pretty = true;
     app.use(bodyParser.urlencoded({extended: true}));
     app.use(bodyParser.json());
