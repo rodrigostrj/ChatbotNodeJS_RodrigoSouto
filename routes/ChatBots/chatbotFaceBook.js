@@ -27,7 +27,7 @@ module.exports = function(app)
             {
                 if(event.message)
                 {
-                    console.log(event.message);
+                    console.log(event.message.text);
                 }
             });
         });
