@@ -36,7 +36,7 @@ SecurityModule.ensureAuthorizedFacebook = function ensureAuthorized(req, res, ne
     }
 
     // check header or url parameters or post parameters for token
-    var token = req.query['hub.verify_toke'];
+    var token = req.query['hub.verify_token'];
 
     // decode token
     if (token) 
