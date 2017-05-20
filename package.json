@@ -2,9 +2,10 @@
   "name": "chatbot_rodrigosouto",
   "version": "1.0.0",
   "description": "Chat bot interacting with several channels",
-  "main": "node index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
