@@ -18,22 +18,18 @@ module.exports = function(app)
             return res.status(400).send("object 'page' not found");
         }
 
-        data.entry.forEach(function(entry)
-        {
-            var pageID = entry.id;
-            var eventTime = entry.time;
-
-            entry.messaging.forEach(function(event)
+       req.body.entry.forEach((entry) =>
+       {
+            entry.messaging.forEach((event) => 
             {
-                if(event.message)
+                if (event.message && event.message.text)
                 {
-                    console.log(event.message.text);
+                    console.log("Texto" + event.message.text);
                 }
             });
         });
 
         return res.status(200);
-
     });
 }
 
