@@ -18,7 +18,7 @@ module.exports = function(app)
             return res.status(400).send("object 'page' not found");
         }
 
-        data.entry.array.forEach(function(entry)
+        data.entry.forEach(function(entry)
         {
             var pageID = entry.id;
             var eventTime = entry.time;
