@@ -25,7 +25,9 @@ module.exports = function(app)
             {
                 if (event.message && event.message.text)
                 {
-                    sendMessage(event);
+                    //sendMessage(event);
+                    console.log("Teste " + Date());
+
                 }
             });
         });
