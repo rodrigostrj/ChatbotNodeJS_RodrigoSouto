@@ -1,4 +1,5 @@
 var securityModule = require(__base + '/modules/module-security');
+var config = require(__base +'/config/config-general');
 var request        = require("request");
 
 var webhookPath = "/webhook/facebook/";
@@ -37,16 +38,26 @@ module.exports = function(app)
 
 function sendMessage(event) 
 {
-  let sender = event.sender.id;
-  let text = event.message.text;
+    //TEXT
+    var sender = event.sender.id;
+    var text = event.message.text;
+    var textResponse = getResponseText(text);
 
+    sendMessageText(sender, text);
+
+    //TODO - Tratar Attachment
+
+}
+
+function sendMessageText(senderId, text)
+{
   request
   (
     {
-        url: 'https://graph.facebook.com/v2.9/me/messages',
-        qs: {access_token: "EAAY0AfpFpGEBAJxIgkuInQkoUC5vtAMSmHAcb3y8kwPMRZAZCXtNQlz5PAB2IPsOp3XzJQd5Tpb3hbbDwB5a68OFBZCtZAW2HF7KsBDjnG8Yeh6fwvwWiLMoyuHvgfhyAieR4msSAGsuggmYLFfZA2IDxL4925cbI4gRgdmHZCxAZDZD"},
+        url: config.facebook_app_path,
+        qs: {access_token: config.facebook_app_access_token},
         method: 'POST',
-        json: { recipient: {id: sender}, message: {text: text}}
+        json: { recipient: {id: senderId}, message: {text: text}}
     }
     ,
     function (error, response)
@@ -63,3 +74,23 @@ function sendMessage(event)
   );
 }
 
+function getResponseText(text)
+{
+    var textReturn = "Não entendi. Pode repetir por favor? Por enquanto eu repondo apenas a 'Ola, Tudo bem? e Qual é o seu nome?'";
+    switch (text)
+    {
+        case "Ola":
+             textReturn = "Tudo bem?";
+            break;  
+        case "Tudo bem?":
+             textReturn = "Que bom!";
+            break;
+        case "Qual é o seu nome?":
+             textReturn = "Eu sou o Jarvis e você?";
+            break;                          
+        default:
+            break;
+    }
+
+    return textReturn;
+}
