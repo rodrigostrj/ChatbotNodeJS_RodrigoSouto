@@ -30,7 +30,7 @@ module.exports = function(app)
             });
         });
 
-        return res.status(200);
+        return res.status(200).end();
     });
 }
 
