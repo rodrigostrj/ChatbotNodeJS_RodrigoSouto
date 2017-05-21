@@ -25,9 +25,7 @@ module.exports = function(app)
             {
                 if (event.message && event.message.text)
                 {
-                    //sendMessage(event);
-                    console.log("Teste " + Date());
-
+                    sendMessage(event);
                 }
             });
         });
@@ -46,7 +44,7 @@ function sendMessage(event)
   (
     {
         url: 'https://graph.facebook.com/v2.9/me/messages',
-        qs: {access_token: "EAAY0AfpFpGEBANcWiiRmC3PSXZAwa1FvtN8p81Ls3KIXlX68qPhb43PqQFFpFmThcREcRrNk169TBojRtQiTU7SYZBDNGcrynvZBwvgKel9FzPZAlVWKr9H6N5BbU3OtHA139IbG8eMkvHyLKGDbTbUxUFqrZA3HMFQ9FUocwZBAZDZD"},
+        qs: {access_token: "EAAY0AfpFpGEBAJxIgkuInQkoUC5vtAMSmHAcb3y8kwPMRZAZCXtNQlz5PAB2IPsOp3XzJQd5Tpb3hbbDwB5a68OFBZCtZAW2HF7KsBDjnG8Yeh6fwvwWiLMoyuHvgfhyAieR4msSAGsuggmYLFfZA2IDxL4925cbI4gRgdmHZCxAZDZD"},
         method: 'POST',
         json: { recipient: {id: sender}, message: {text: text}}
     }
