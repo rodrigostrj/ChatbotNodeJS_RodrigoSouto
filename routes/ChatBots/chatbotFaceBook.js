@@ -43,7 +43,7 @@ function sendMessage(event)
     var text = event.message.text;
     var textResponse = getResponseText(text);
 
-    sendMessageText(sender, text);
+    sendMessageText(sender, textResponse);
 
     //TODO - Tratar Attachment
 
