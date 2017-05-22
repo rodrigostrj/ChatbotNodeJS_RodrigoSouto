@@ -17,7 +17,10 @@ Use Case:
 - Basic structure in NodeJS
 - Chat Bot Integration (Channels)
 - Tool (BotFramework Emulator) =>: https://docs.microsoft.com/en-us/bot-framework/debug-bots-emulator
-- Altificial Inteligence (LUIS => https://www.luis.ai) ou (Recast => https://recast.ai/)
+- Altificial Inteligence 
+		   (LUIS => https://www.luis.ai)
+		ou (Recast => https://recast.ai/)
+		ou (Api.Ai => https://api.ai)
 - Chat working
 
 

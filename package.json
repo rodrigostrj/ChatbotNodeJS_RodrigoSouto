@@ -26,6 +26,7 @@
   "homepage": "https://github.com/rodrigostrj/ChatbotNodeJS_RodrigoSouto#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "botbuilder": "^3.8.3",
     "consign": "^0.1.4",
     "express": "^4.15.3",
     "morgan": "^1.8.1",
