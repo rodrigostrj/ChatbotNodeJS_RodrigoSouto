@@ -22,6 +22,7 @@ module.exports = function(app)
         (connector, function (session) 
         {
             session.send("You said: %s", session.message.text);
+            console.log(session.message.text);
         });
 
         return res.status(200).end();
